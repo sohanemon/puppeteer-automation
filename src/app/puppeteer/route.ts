@@ -13,9 +13,7 @@ export async function GET(req: Request) {
         '#default > div.container-fluid.page > div > div > div > section > div:nth-child(2) > ol > li'
       )
     );
-    list.forEach((el) => {
-      console.log(el.innerHTML);
-    });
+    console.log(list);
   });
 
   await b.close();
