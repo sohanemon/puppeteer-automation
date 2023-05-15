@@ -8,7 +8,9 @@ export async function GET(req: Request) {
   await page.goto(url);
 
   const book = await page.evaluate(() => {
-    return document.getElementsByClassName('image_container');
+    return document.querySelectorAll(
+      '#default > div.container-fluid.page > div > div > div > section > div:nth-child(2) > ol > li:nth-child(1)'
+    );
   });
   console.log(book);
 
