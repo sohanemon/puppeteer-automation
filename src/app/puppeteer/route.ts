@@ -7,6 +7,11 @@ export async function GET(req: Request) {
   const page = b.newPage();
   (await page).goto(url);
 
+  (await page).evaluate(() => {
+    const classes = document.getElementsByClassName('image_container');
+    console.log(classes);
+  });
+
   b.close();
   return NextResponse.json('Welcome in web scraping');
 }
