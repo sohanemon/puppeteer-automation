@@ -17,11 +17,12 @@ To get all the `array` features we can use as below:
 const book = await page.evaluate(() =>
      Array.from(
       document.querySelectorAll(
-        '#default > div.container-fluid.page > div > div > div > section > div > ol > li'
+        '#default > div.container-fluid.page > div > section > div > ol > li'
       )
     );
 );
-
 ```
+
+> `Array.from(any_Array)` does same as `[...any_Array]`. But `Array.from(any_Array)` is better 🤔
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
