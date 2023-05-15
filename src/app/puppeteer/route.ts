@@ -1,16 +1,16 @@
 import { NextResponse } from 'next/server';
-import { Browser } from 'puppeteer';
+import puppeteer from 'puppeteer';
 
 export async function GET(req: Request) {
   const url = 'https://books.toscrape.com';
-  const b = new Browser();
+  const b = await puppeteer.launch({ headless: true });
   const page = await b.newPage();
   await page.goto(url);
 
   const book = await page.evaluate(() => {
-    const classes = document.getElementsByClassName('image_container');
-    console.log(classes);
+    return document.getElementsByClassName('image_container');
   });
+  console.log(book);
 
   await b.close();
   return NextResponse.json('Welcome in web scraping');
