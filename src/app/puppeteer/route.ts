@@ -14,7 +14,9 @@ export async function GET(req: Request) {
       )
     )
   );
-  book.map((el) => console.log(el));
+  book.map((el) => ({
+    name: el?.querySelector('h3 > a')?.textContent,
+  }));
   await b.close();
 
   return NextResponse.json('lol');
