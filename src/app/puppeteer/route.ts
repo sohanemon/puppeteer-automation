@@ -7,16 +7,19 @@ export async function GET(req: Request) {
   const page = await b.newPage();
   await page.goto(url);
 
-  const book = await page.evaluate(() =>
-    Array.from(
+  const book = await page.evaluate(() => {
+    console.log('first');
+    const books = Array.from(
       document.querySelectorAll(
         '#default > div.container-fluid.page > div > div > div > section > div > ol > li'
       )
-    )
-  );
-  book.map((el) => ({
-    name: el?.querySelector('h3 > a')?.textContent,
-  }));
+    );
+    const final = books.map((el) => ({
+      name: el?.querySelector('h3 > a')?.innerHTML,
+    }));
+    return final;
+  });
+  //   console.log(book);
   await b.close();
 
   return NextResponse.json('lol');
