@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 
 export async function GET(req: Request) {
   const url = 'https://books.toscrape.com';
-  const b = await puppeteer.launch({ headless: true });
+  const b = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await b.newPage();
   await page.goto(url);
 
