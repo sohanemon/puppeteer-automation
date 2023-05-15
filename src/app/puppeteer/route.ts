@@ -4,10 +4,12 @@ import { Browser } from 'puppeteer';
 export async function GET(req: Request) {
   const url = 'https://books.toscrape.com';
   const b = new Browser();
-  const page = b.newPage();
-  (await page).goto(url);
+  const page = await b.newPage();
+  page.goto(url);
 
-  (await page).evaluate(() => {
+  await (
+    await page
+  ).evaluate(() => {
     const classes = document.getElementsByClassName('image_container');
     console.log(classes);
   });
