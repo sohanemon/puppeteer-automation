@@ -8,12 +8,17 @@ export async function GET(req: Request) {
   await page.goto(url);
 
   const book = await page.evaluate(() => {
-    return document.querySelectorAll(
-      '#default > div.container-fluid.page > div > div > div > section > div:nth-child(2) > ol > li:nth-child(1)'
+    const list = Array.from(
+      document.querySelectorAll(
+        '#default > div.container-fluid.page > div > div > div > section > div:nth-child(2) > ol > li'
+      )
     );
+    list.forEach((el) => {
+      console.log(el.innerHTML);
+    });
   });
-  console.log(book);
 
   await b.close();
-  return NextResponse.json('Welcome in web scraping');
+
+  return NextResponse.json('lol');
 }
