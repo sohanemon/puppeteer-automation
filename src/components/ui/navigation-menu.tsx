@@ -63,7 +63,7 @@ export default function NavigationMenuDemo() {
           <NavigationMenu.Item>
             <NavigationMenu.Link
               className=' block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none '
-              href='https://github.com/radix-ui'
+              href='https://github.com/sohanemon'
             >
               Github
             </NavigationMenu.Link>
