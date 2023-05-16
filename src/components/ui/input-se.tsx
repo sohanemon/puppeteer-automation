@@ -4,7 +4,7 @@ import * as Label from '@radix-ui/react-label';
 export default function InputSe() {
   return (
     <>
-      <div className='space-y-2 px-5 @container w-1/2 mx-auto'>
+      <div className='space-y-2 px-5 @container max-w-md mx-auto'>
         <div>
           <Label.Root
             className='text-[15px] font-medium leading-[35px] whitespace-nowrap text-white'
