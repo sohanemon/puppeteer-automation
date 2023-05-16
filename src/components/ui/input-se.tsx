@@ -1,7 +1,12 @@
 'use client';
+import { scraper } from '@/util/scraper';
 import * as Label from '@radix-ui/react-label';
 
 export default function InputSe() {
+  function handleOnclick() {
+    scraper('url');
+  }
+
   return (
     <>
       <div className='space-y-2 px-5 @container max-w-md mx-auto'>
@@ -19,7 +24,10 @@ export default function InputSe() {
             defaultValue='https://github.com/sohanemon'
           />
         </div>
-        <button className='block px-4 py-2 w-full @sm:w-max tracking-wide rounded-md  bg-neutral-800'>
+        <button
+          onClick={handleOnclick}
+          className='block px-4 py-2 w-full @sm:w-max tracking-wide rounded-md  bg-neutral-800'
+        >
           Scrap
         </button>
       </div>
