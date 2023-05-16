@@ -4,7 +4,7 @@ import * as Label from '@radix-ui/react-label';
 export default function InputSe() {
   return (
     <>
-      <div className='flex flex-wrap items-center gap-[15px] px-5 '>
+      <div className='flex flex-wrap items-center gap-[15px] px-5 @container w-full mx-auto'>
         <Label.Root
           className='text-[15px] font-medium leading-[35px] text-white'
           htmlFor='firstName'
