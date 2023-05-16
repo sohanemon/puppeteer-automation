@@ -70,7 +70,7 @@ export default function NavigationMenuDemo() {
           </NavigationMenu.Item>
 
           <NavigationMenu.Indicator className='data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-[1] flex h-[10px] items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]'>
-            <div className='relative top-[70%] h-[10px] w-[10px] rotate-[45deg] rounded-tl-[2px] bg-white' />
+            <div className='relative top-[70%] h-[10px] w-[10px] rotate-[45deg] rounded-tl-[2px] bg-neutral-700' />
           </NavigationMenu.Indicator>
         </NavigationMenu.List>
 
