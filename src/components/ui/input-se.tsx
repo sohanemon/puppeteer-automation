@@ -19,7 +19,7 @@ export default function InputSe() {
             defaultValue='https://github.com/sohanemon'
           />
         </div>
-        <button className='px-4 py-2 ml-auto tracking-wide rounded-md bg-neutral-800 '>
+        <button className='w-full px-4 py-2 ml-auto tracking-wide rounded-md bg-neutral-800'>
           Scrap
         </button>
       </div>
