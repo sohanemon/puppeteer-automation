@@ -8,9 +8,9 @@ export default function NavigationMenuDemo() {
   return (
     <>
       <NavigationMenu.Root className='relative z-[1] flex w-screen justify-center text-neutral-200'>
-        <NavigationMenu.List className='center shadow-blackA7 m-0 flex list-none rounded-[6px] bg-neutral-700 p-1 shadow-[0_2px_10px]'>
+        <NavigationMenu.List className='center  m-0 flex list-none rounded-[6px] bg-neutral-700 p-1 0_2px_10px]'>
           <NavigationMenu.Item>
-            <NavigationMenu.Trigger className='hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]'>
+            <NavigationMenu.Trigger className='hover:bg-violet3  group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none '>
               Learn{' '}
               <CaretDownIcon
                 className='relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180'
@@ -23,7 +23,7 @@ export default function NavigationMenuDemo() {
                   <NavigationMenu.Link asChild>
                     <a
                       className='flex
-                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-neutral-700 p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]'
+                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-neutral-700 p-[25px] no-underline outline-none '
                       href='/'
                     >
                       <svg
@@ -62,7 +62,7 @@ export default function NavigationMenuDemo() {
 
           <NavigationMenu.Item>
             <NavigationMenu.Link
-              className=' hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]'
+              className=' hover:bg-violet3  block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none '
               href='https://github.com/radix-ui'
             >
               Github
@@ -94,7 +94,7 @@ const ListItem = forwardRef<any, Props>(
       <NavigationMenu.Link asChild>
         <a
           className={classNames(
-            'focus:shadow-[0_0_0_2px] focus:shadow-violet7 hover:bg-mauve3 block select-none rounded-[6px] p-3 text-[15px] leading-none no-underline outline-none transition-colors',
+            '  hover:bg-mauve3 block select-none rounded-[6px] p-3 text-[15px] leading-none no-underline outline-none transition-colors',
             className
           )}
           ref={forwardedRef}
