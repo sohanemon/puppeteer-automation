@@ -4,7 +4,7 @@ import * as Label from '@radix-ui/react-label';
 export default function InputSe() {
   return (
     <>
-      <div className='flex items-center gap-[15px] px-5 @container w-96 mx-auto fixed inset-0'>
+      <div className='flex items-center gap-[15px] px-5 @container w-1/2 mx-auto fixed inset-0'>
         <Label.Root
           className='text-[15px] font-medium leading-[35px] whitespace-nowrap text-white'
           htmlFor='toScrape'
