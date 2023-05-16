@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import puppeteer from 'puppeteer';
 
-export async function GET(req: Request) {
+export async function POST(req: Request) {
+  const data = await req.json();
   const url = 'https://books.toscrape.com';
   const b = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await b.newPage();
@@ -22,5 +23,9 @@ export async function GET(req: Request) {
   //   console.log(book);
   await b.close();
 
-  return NextResponse.json('lol');
+  return NextResponse.json(data);
+}
+
+export async function GET(req: Request) {
+  return NextResponse.json('sorry bro');
 }
